@@ -21,7 +21,6 @@ public class Arkanoid_Principal extends JFrame implements ActionListener {
         add(titulo);
         setBackground(new Color(0,110,255));
         PantallaInicio start = new PantallaInicio();
-        start.setBounds(0, 100, 10, 10);
         this.add(start);
         
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
