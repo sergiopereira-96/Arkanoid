@@ -49,7 +49,7 @@ public final class Game extends JPanel implements ActionListener {
         {2, 3, 55, 100}, {2, 1, 145, 100}, {2, 2, 235, 100}, {2, 1, 325, 100}, {2, 3, 415, 100},
         //nivel == 3
 
-        {3, 3, 55, 120}, {3, 1, 100, 120}, {3, 1, 145, 120}, {3, 1, 190, 120}, {3, 1, 235, 120}, {3, 1, 280, 120}, {3, 1, 325, 120}, {3, 3, 370, 120},
+       {3, 3, 55, 120}, {3, 1, 100, 120}, {3, 1, 145, 120}, {3, 1, 190, 120}, {3, 1, 235, 120}, {3, 1, 280, 120}, {3, 1, 325, 120}, {3, 3, 370, 120},
         {3, 3, 55, 130}, {3, 2, 100, 130}, {3, 2, 145, 130}, {3, 2, 190, 130}, {3, 2, 235, 130}, {3, 2, 280, 130}, {3, 2, 325, 130}, {3, 3, 370, 130},
         {3, 3, 55, 140}, {3, 1, 100, 140}, {3, 1, 145, 140}, {3, 1, 190, 140}, {3, 1, 235, 140}, {3, 1, 280, 140}, {3, 1, 325, 140}, {3, 3, 370, 140},
         {3, 3, 55, 150}, {3, 2, 100, 150}, {3, 2, 145, 150}, {3, 2, 190, 150}, {3, 2, 235, 150}, {3, 2, 280, 150}, {3, 2, 325, 150}, {3, 3, 370, 150},
@@ -102,7 +102,7 @@ public final class Game extends JPanel implements ActionListener {
                 g.setColor(b.getColor());
                 g.fillRect(b.getX(), b.getY(), b.getWidth(), b.getHeight());
             }
-            g.setColor(Color.black);
+           // g.setColor(Color.white);
 
 
 
@@ -118,34 +118,7 @@ public final class Game extends JPanel implements ActionListener {
 
     public void actionPerformed(ActionEvent e) { //mueve los objetos creados
         if (gamePlay) { //chequea que el juego esta activo
-            for (int i = 0; i < ListaLadrillos.size(); i++) {
-                if (ListaLadrillos.get(i).getVisible() == false) {
-                    ListaLadrillos.remove(i);
-                }
-            }
-
-
-            int total = 0;
-           for (int i = 0; i < ListaLadrillos.size(); i++) {
-                    total++;
-           
-            }
-            if (total == 0) { 
-                nivelJugador++; 
-                if (nivelJugador > nivel) { //si no hay mas niveles
-                    gamePlay = false;  //end game
-                } else { //va a l siguiente nivel
-                    setNivel();   //cambia el nivel
-                    
-                    if(nivelJugador == 2) {
-                    	pad.setWidth(50);
-                    }
-                    if(nivelJugador == 3) {
-                    	pad.setWidth(40);	
-                    }
-                    resetPosicion(); //reseta la pelota y el pad
-                }
-            }
+     
 
             if (ListaLadrillos.size() > 0) {  //si queda ladrillos en pantalla.
                 pad.move();
@@ -158,6 +131,12 @@ public final class Game extends JPanel implements ActionListener {
                     gamePlay = false;  //fin del juego
                 } else {
                     setNivel();
+                        if(nivelJugador == 2) {
+                    	pad.setWidth(50);
+                    }
+                    if(nivelJugador == 3) {
+                    	pad.setWidth(40);	
+                    }
                     resetPosicion();
                 }
             }

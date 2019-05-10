@@ -51,15 +51,6 @@ public class Ladrillo {
         return height;
     }
 
-    public boolean getVisible() 
-    {
-        return visible;
-    }
-
-    public void setVisible(boolean newVisible) 
-    {
-        visible = newVisible;
-    }
 
     public int getTipoLadrillo() 
     {
