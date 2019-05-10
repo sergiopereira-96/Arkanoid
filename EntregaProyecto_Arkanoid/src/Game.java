@@ -18,7 +18,7 @@ public final class Game extends JPanel implements ActionListener {
     private Timer timer;  
     private int nivel = 3; //indica los niveles
     private static String victoriaStr = "Has ganado!!";
-    private int vidasRestantes = 1;  //vidas del jugador
+    private int vidasRestantes = 4;  //vidas del jugador
     private String vidasStr = "Vidas Restantes";
     private String puntuacionStr = "Puntos : ";
     private String nivelStr = "Nivel : ";
