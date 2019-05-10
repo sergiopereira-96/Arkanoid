@@ -20,7 +20,7 @@ public class Arkanoid_Principal extends JFrame implements ActionListener {
         add(button, BorderLayout.CENTER);
         add(titulo);
         setBackground(new Color(0,110,255));
-        Startscreen start = new Startscreen();
+        PantallaInicio start = new PantallaInicio();
         start.setBounds(0, 100, 10, 10);
         this.add(start);
         
@@ -53,9 +53,9 @@ public class Arkanoid_Principal extends JFrame implements ActionListener {
     }
 }
 
-class Startscreen extends JPanel {  //esta clase la crearemos para enviar la informacion del juego al panel principal
+class PantallaInicio extends JPanel {  //esta clase la crearemos para enviar la informacion del juego al panel principal
 
-    public Startscreen() {
+    public PantallaInicio() {
 
         //envia propiedades al panel
         setFocusable(true);
